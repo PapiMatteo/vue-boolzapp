@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolzapp</title>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- VueJs -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+            <div class="wrapper">
+            <div class="container">
+                <!-- EXTERNAL STRUCTURE -->
+                <div class="external-row">
+                    <div class="left-col flex">
+                        <!-- Header -->
+                        <header class="left-header">
+                            <div class="header-row flex">
+                                <div class="profile-pic">
+                                    <img src="img/avatar_io.jpg" alt="">
+                                </div>
+                                <nav class="left-nav nav">
+                                    <ul class="left-nav-list flex">
+                                        <li>
+                                            <button class="icon-btn"><i class="fa-solid fa-circle-notch fa-2x"></i></button>
+                                        </li>
+
+                                        <li>
+                                            <button class="icon-btn"><i class="fa-solid fa-message fa-2x"></i></button>
+                                        </li>
+
+                                        <li>
+                                            <button class="icon-btn"><i class="fa-solid fa-ellipsis-vertical fa-2x"></i></button>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </header>
+                        <!-- /Header -->
+
+                        <!-- Main -->
+                            
+                            <!-- Navigation -->
+                            <div class="nav-container">
+                                <!-- Notification -->
+                                <div class="notification flex">
+                                    <div class="notification-icon">
+                                        <span class="bell-icon"><i class="fa-solid fa-bell-slash fa-2x"></i></span>
+                                    </div>
+                                    <div class="notification-text">
+                                        <h3>Ricevi notiviche di nuovi messaggi</h3>
+                                        <p class="notification-link"><a href="">Attiva le notifiche desktop</a></p>
+                                    </div>
+                                </div>
+                                <!-- /Notification -->
+
+                                <!-- Search -->
+                                <div class="search-section">
+                                    <div class="search-spot">
+                                        <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                                        <input type="search" name="contact-search" id="search" placeholder="Cerca o inizia una nuova chat">
+                                    </div>
+                                </div>
+                                <!-- /Search -->
+                            </div>
+                            <!-- /Navigation -->
+
+                            <!-- Chat List -->
+                            <div class="chat-container" id="chat-id">
+                                <ul class="chat">
+                                    <li class="chat-item flex">
+                                        <div class="img-text-content flex">
+                                            <div class="img-content">
+                                                <img src="img/avatar_1.jpg" alt="">
+                                            </div>
+                                            <div class="text-content">
+                                                <h3>Michele</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                        <div class="hour">
+                                            <p>16:25</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="chat-item flex">
+                                        <div class="img-text-content flex">
+                                            <div class="img-content">
+                                                <img src="img/avatar_2.jpg" alt="">
+                                            </div>
+                                            <div class="text-content">
+                                                <h3>Fabio</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                        <div class="hour">
+                                            <p>16:12</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="chat-item flex">
+                                        <div class="img-text-content flex">
+                                            <div class="img-content">
+                                                <img src="img/avatar_3.jpg" alt="">
+                                            </div>
+                                            <div class="text-content">
+                                                <h3>Samuele</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                        <div class="hour">
+                                            <p>16:05</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="chat-item flex">
+                                        <div class="img-text-content flex">
+                                            <div class="img-content">
+                                                <img src="img/avatar_4.jpg" alt="">
+                                            </div>
+                                            <div class="text-content">
+                                                <h3>Alessandro B.</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                        <div class="hour">
+                                            <p>15:55</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="chat-item flex">
+                                        <div class="img-text-content flex">
+                                            <div class="img-content">
+                                                <img src="img/avatar_5.jpg" alt="">
+                                            </div>
+                                            <div class="text-content">
+                                                <h3>Alessandro L.</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                        <div class="hour">
+                                            <p>15:50</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="chat-item flex">
+                                        <div class="img-text-content flex">
+                                            <div class="img-content">
+                                                <img src="img/avatar_6.jpg" alt="">
+                                            </div>
+                                            <div class="text-content">
+                                                <h3>Claudia</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                        <div class="hour">
+                                            <p>15:35</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="chat-item flex">
+                                        <div class="img-text-content flex">
+                                            <div class="img-content">
+                                                <img src="img/avatar_7.jpg" alt="">
+                                            </div>
+                                            <div class="text-content">
+                                                <h3>Federico</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                        <div class="hour">
+                                            <p>15:25</p>
+                                        </div>
+                                    </li>
+
+                                    <li class="chat-item flex">
+                                        <div class="img-text-content flex">
+                                            <div class="img-content">
+                                                <img src="img/avatar_8.jpg" alt="">
+                                            </div>
+                                            <div class="text-content">
+                                                <h3>Marco</h3>
+                                                <p>Lorem ipsum dolor sit amet.</p>
+                                            </div>
+                                        </div>
+                                        <div class="hour">
+                                            <p>15:20</p>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <!-- /Chat List -->
+
+                        <!-- /Main -->
+
+                    </div>
+                    <div class="right-col">
+                        <!-- Header -->
+                        <header class="right-header">
+                            <div class="header-row flex">
+                                <div class="img-text-content flex">
+                                    <div class="profile-pic">
+                                        <img src="img/avatar_1.jpg" alt="">
+                                    </div>
+                                    <div class="name-last-access">
+                                        <h3>Michele</h3>
+                                        <p>Ultimo accesso oggi alle 16:25</p>
+                                    </div>
+                                </div>
+                                <nav class="right-nav nav">
+                                    <ul class="right-nav-list flex">
+                                        <li>
+                                            <button class="icon-btn"><i class="fa-solid fa-magnifying-glass fa-2x"></i></button>
+                                        </li>
+
+                                        <li>
+                                            <button class="icon-btn"><i class="fa-solid fa-paperclip fa-2x"></i></button>
+                                        </li>
+
+                                        <li>
+                                            <button class="icon-btn"><i class="fa-solid fa-ellipsis-vertical fa-2x"></i></button>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </header>
+                        <!-- /Header -->
+
+                        <!-- Main -->
+                        <main class="right-main flex">
+                            <div class="msg green-msg">
+                                <div class="msg-text">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ad, odio quisquam laudantium earum veniam rem autem impedit iste dolor fuga vitae tenetur culpa rerum ut? Culpa eaque recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quisquam nisi voluptatibus.</p>
+                                </div>
+
+                                <div class="hover-menu">
+                                    <button class="hover-btn"><i class="fa-solid fa-angle-down"></i></button>
+                                    <div class="hidden-menu">
+                                        <button class="inner-btn">Info messaggio</button>
+                                        <button class="inner-btn">Cancella messaggio</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <div class="msg white-msg">
+                                <div class="msg-text">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ad, odio quisquam laudantium earum veniam rem autem impedit iste dolor fuga vitae tenetur culpa rerum ut? Culpa eaque recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quisquam nisi voluptatibus.</p>
+                                </div>
+
+                                <div class="hover-menu">
+                                    <button class="hover-btn"><i class="fa-solid fa-angle-down"></i></button>
+                                    <div class="hidden-menu">
+                                        <button class="inner-btn">Info messaggio</button>
+                                        <button class="inner-btn">Cancella messaggio</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </main>
+                        <!-- /Main -->
+
+                        <!-- Footer -->
+                        <footer>
+                            <div class="footer flex">
+                                <div class="footer-icons">
+                                    <button class="icon-btn footer-btn"><i class="fa-regular fa-face-smile fa-3x"></i></button>
+                                </div>
+                                <div class="write-text">
+                                    <input type="text" name="message" id="message-text" placeholder=" Scrivi un messaggio">
+                                </div>
+                                <button class="icon-btn footer-btn"><i class="fa-solid fa-microphone fa-3x"></i></button>
+                            </div>
+                        </footer>
+                        <!-- /Footer -->
+                    </div>
+                </div>
+                <!-- /EXTERNAL STRUCTURE -->
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
