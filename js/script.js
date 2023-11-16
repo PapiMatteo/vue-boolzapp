@@ -166,7 +166,8 @@ createApp({
                     ],
                 }
             ],
-            activeIndex: 0
+            activeIndex: 0,
+            newMsgText: ''
         }
     },
     methods: {
@@ -174,6 +175,23 @@ createApp({
             
             this.activeIndex = chatIndex;
             // console.log('click', this.activeIndex)
+        },
+        sendMsg() {
+            if(this.newMsgText !== '') {
+                this.contacts[this.activeIndex].messages.push({
+                message: this.newMsgText,
+                status: 'sent'
+                });
+                this.newMsgText = '';
+                setTimeout(this.receivedMsg, 1000); 
+            }
+            
+        },
+        receivedMsg() {
+            this.contacts[this.activeIndex].messages.push({
+                message: 'Ok',
+                status: 'received'
+            })
         }
     }   
 

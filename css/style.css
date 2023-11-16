@@ -177,7 +177,7 @@ li img {
 .msg {
     position: relative;
     max-width: 55%;
-    padding: 1.5rem 2rem 1.5rem 1.5rem;
+    padding: 1rem 2.5rem 1rem 1.5rem;
     border-radius: 10px;
 }
 
@@ -385,6 +385,7 @@ li img {
     height: 50px;
     border: 1px solid #d4d4d4;
     border-radius: 4px;
+    padding-left: 20px;
 }
 
 @media screen and (max-width: 540px) {

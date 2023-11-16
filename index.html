@@ -146,20 +146,6 @@
 
                             </div>
                             
-                            <!-- <div class="msg white-msg">
-                                <div class="msg-text">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ad, odio quisquam laudantium earum veniam rem autem impedit iste dolor fuga vitae tenetur culpa rerum ut? Culpa eaque recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quisquam nisi voluptatibus.</p>
-                                </div>
-
-                                <div class="hover-menu">
-                                    <button class="hover-btn"><i class="fa-solid fa-angle-down"></i></button>
-                                    <div class="hidden-menu">
-                                        <button class="inner-btn">Info messaggio</button>
-                                        <button class="inner-btn">Cancella messaggio</button>
-                                    </div>
-                                </div>
-
-                            </div> -->
                         </main>
                         <!-- /Main -->
 
@@ -170,7 +156,8 @@
                                     <button class="icon-btn footer-btn"><i class="fa-regular fa-face-smile fa-3x"></i></button>
                                 </div>
                                 <div class="write-text">
-                                    <input type="text" name="message" id="message-text" placeholder=" Scrivi un messaggio">
+                                    <label for="message-text"></label>
+                                    <input type="text" name="message" id="message-text" placeholder=" Scrivi un messaggio..." v-model.trim="newMsgText" @keyup.enter="sendMsg">
                                 </div>
                                 <button class="icon-btn footer-btn"><i class="fa-solid fa-microphone fa-3x"></i></button>
                             </div>
