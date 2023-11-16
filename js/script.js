@@ -167,31 +167,49 @@ createApp({
                 }
             ],
             activeIndex: 0,
-            newMsgText: ''
+            newMsgText: '',
+            searchText: ''
         }
     },
     methods: {
         selectedChat(chatIndex) {
             
             this.activeIndex = chatIndex;
-            // console.log('click', this.activeIndex)
+            
         },
         sendMsg() {
             if(this.newMsgText !== '') {
-                this.contacts[this.activeIndex].messages.push({
-                message: this.newMsgText,
-                status: 'sent'
-                });
+
+                let newMessage = {
+                    message: this.newMsgText,
+                    status: 'sent'
+                    }
+                this.contacts[this.activeIndex].messages.push(newMessage);
                 this.newMsgText = '';
                 setTimeout(this.receivedMsg, 1000); 
-            }
+
+            };
             
         },
         receivedMsg() {
+
             this.contacts[this.activeIndex].messages.push({
                 message: 'Ok',
                 status: 'received'
-            })
+            });
+
+        },
+        contactResearch() {
+
+            let search = this.searchText.toLowerCase();
+            this.contacts.forEach(curContact => {
+                if (curContact.name.toLowerCase().includes(search)) {
+                    curContact.visible = true;
+                } else {
+                    curContact.visible = false
+                };
+            });
+            
         }
     }   
 

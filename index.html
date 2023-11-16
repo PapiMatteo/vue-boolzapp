@@ -65,7 +65,7 @@
                                 <div class="search-section">
                                     <div class="search-spot">
                                         <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
-                                        <input type="search" name="contact-search" id="search" placeholder="Cerca o inizia una nuova chat">
+                                        <input type="search" name="contact-search" id="search" placeholder="Cerca o inizia una nuova chat" v-model="searchText" @keyup="contactResearch">
                                     </div>
                                 </div>
                                 <!-- /Search -->
@@ -75,7 +75,7 @@
                             <!-- Chat List -->
                             <div class="chat-container" id="chat-id">
                                 <ul class="chat">
-                                    <li v-for="(user, contactIndex) in contacts" class="chat-item flex" @click="selectedChat(contactIndex)">
+                                    <li v-for="(user, contactIndex) in contacts" class="chat-item " @click="selectedChat(contactIndex)" :class="{'flex': user.visible, 'hide': !user.visible}">
                                         <div class="img-text-content flex">
                                             <div class="img-content">
                                                 <img :src="`img/avatar${user.avatar}.jpg`" alt="user.name">
