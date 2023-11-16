@@ -396,3 +396,11 @@ li img {
         width: 95%;
     }
 }
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}

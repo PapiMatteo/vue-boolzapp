@@ -165,9 +165,16 @@ createApp({
                         }
                     ],
                 }
-            ]
-            
+            ],
+            activeIndex: 0
         }
-    },   
+    },
+    methods: {
+        selectedChat(chatIndex) {
+            
+            this.activeIndex = chatIndex;
+            // console.log('click', this.activeIndex)
+        }
+    }   
 
 }).mount('#app')
