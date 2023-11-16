@@ -167,6 +167,7 @@ createApp({
                 }
             ],
             activeIndex: 0,
+            msgActiveIndex: 0,
             newMsgText: '',
             searchText: ''
         }
@@ -209,7 +210,13 @@ createApp({
                     curContact.visible = false
                 };
             });
-            
+
+        },
+        deleteMsg(messageIndex) {
+
+            this.msgActiveIndex = messageIndex;
+            this.contacts[this.activeIndex].messages.splice(this.msgActiveIndex, 1)
+
         }
     }   
 

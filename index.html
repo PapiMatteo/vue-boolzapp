@@ -140,7 +140,7 @@
                                     <button class="hover-btn"><i class="fa-solid fa-angle-down"></i></button>
                                     <div class="hidden-menu">
                                         <button class="inner-btn">Info messaggio</button>
-                                        <button class="inner-btn">Cancella messaggio</button>
+                                        <button class="inner-btn" @click.stop="deleteMsg(msgIndex)">Cancella messaggio</button>
                                     </div>
                                 </div>
 

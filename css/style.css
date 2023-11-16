@@ -223,6 +223,7 @@ li img {
     position: absolute;
     top: 35px;
     right: 20px;
+    z-index: 2;
 }
 
 
