@@ -20,7 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient( to bottom, #009688 0%, #009688 13%, #dbdbd3 13%, #dbdbd3 80%); 
+    background: linear-gradient(to bottom, #009688 0%, #009688 13%, #dbdbd3 13%, #dbdbd3 80%);
 }
 
 .container {
@@ -34,14 +34,15 @@ body {
 }
 
 li img {
-    margin-left: 1rem; 
+    margin-left: 1rem;
     border-radius: 50%;
     object-fit: cover;
     width: 60px;
     height: 60px;
 }
 
-.text-content p, .name-last-access p {
+.text-content p,
+.name-last-access p {
     color: #b6b5b5;
     line-height: 1.8;
 }
@@ -86,7 +87,7 @@ li img {
     }
 
     .right-col {
-        width:calc(100% - 100px) ;
+        width: calc(100% - 100px);
     }
 }
 
@@ -94,13 +95,15 @@ li img {
     .left-col {
         display: none;
     }
+
     .right-col {
         width: 100%;
     }
 }
 
 /* LEFT AND RIGHT HEADER */
-.left-header, .right-header {
+.left-header,
+.right-header {
     height: 80px;
     background-color: #eaeaea;
 }
@@ -111,8 +114,8 @@ li img {
     justify-content: space-between;
 }
 
-.profile-pic img{
-    margin-left: 1rem;   
+.profile-pic img {
+    margin-left: 1rem;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -176,8 +179,9 @@ li img {
 
 .msg {
     position: relative;
-    max-width: 55%;
-    padding: 1rem 2.5rem 1rem 1.5rem;
+    min-width: 20%;
+    max-width: 60%;
+    padding: 1rem 2.5rem 1.5rem 1.5rem;
     border-radius: 10px;
 }
 
@@ -331,7 +335,7 @@ li img {
     align-items: center;
 }
 
-.img-text-content{
+.img-text-content {
     width: 80%;
     align-items: center;
     gap: 1rem;
@@ -348,8 +352,8 @@ li img {
 @media screen and (max-width: 991px) {
     .nav-container {
         display: none;
-    } 
-    
+    }
+
     .right-col {
         height: 100%;
     }
@@ -358,7 +362,8 @@ li img {
         height: calc(100% - (2 * 80px));
     }
 
-    #chat-id p, #chat-id h3 {
+    #chat-id p,
+    #chat-id h3 {
         display: none;
     }
 }
@@ -370,7 +375,7 @@ li img {
     height: 80px;
     align-items: center;
     justify-content: space-around;
-}    
+}
 
 .footer-btn {
     background: none;
@@ -403,3 +408,16 @@ li img {
     display: none;
 }
 
+.message-time {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+    color: #B6B9BB;
+}
+
+.last-msg {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}

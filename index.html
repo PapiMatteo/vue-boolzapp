@@ -82,11 +82,11 @@
                                             </div>
                                             <div class="text-content">
                                                 <h3>{{user.name}}</h3>
-                                                <p>ULTIMO MESSAGGIO</p>
+                                                <p class="last-msg">{{ `${truncateText(user.messages[user.messages.length - 1].message)}...` }}</p>
                                             </div>
                                         </div>
                                         <div class="hour">
-                                            <p>16:25</p>
+                                            <p>{{ dateToHourMin(user.messages[user.messages.length - 1].date) }}</p>
                                         </div>
                                     </li>
                                 </ul>
@@ -142,7 +142,9 @@
                                         <button class="inner-btn">Info messaggio</button>
                                         <button class="inner-btn" @click.stop="deleteMsg(msgIndex)">Cancella messaggio</button>
                                     </div>
+                                    
                                 </div>
+                                <span class="message-time">{{ curMsg.date }}</span>
 
                             </div>
                             
@@ -170,6 +172,8 @@
         </div>
     </div>
     
+    <!-- Luxon -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
 
     <!-- Custom Script -->
     <script src="js/script.js"></script>
