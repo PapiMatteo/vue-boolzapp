@@ -415,9 +415,3 @@ li img {
     font-size: 10px;
     color: #B6B9BB;
 }
-
-.last-msg {
-    white-space: nowrap;
-    overflow-x: hidden;
-    text-overflow: ellipsis;
-}
