@@ -1,6 +1,6 @@
 const dt = luxon.DateTime;
 const curDate = dt.now().setLocale('it').toFormat('dd/MM/yyyy HH:mm:ss');
-console.log(curDate);
+
 
 const {createApp} = Vue;
 
@@ -186,21 +186,21 @@ createApp({
             if(this.newMsgText !== '') {
 
                 let newMessage = {
-                    date: curDate,
+                    date: dt.now().setLocale('it').toFormat('dd/MM/yyyy HH:mm:ss'),
                     message: this.newMsgText,
                     status: 'sent',
                     }
                 this.contacts[this.activeIndex].messages.push(newMessage);
                 this.newMsgText = '';
-                setTimeout(this.receivedMsg, 1000); 
+                setTimeout(this.receivedMsg(this.activeIndex), 1000); 
 
             };
             
         },
-        receivedMsg() {
-
-            this.contacts[this.activeIndex].messages.push({
-                date: curDate,
+        receivedMsg(replyIndex) {
+            
+            this.contacts[replyIndex].messages.push({
+                date: dt.now().setLocale('it').toFormat('dd/MM/yyyy HH:mm:ss'),
                 message: 'Ok',
                 status: 'received'
             });
@@ -220,17 +220,21 @@ createApp({
         },
         deleteMsg(messageIndex) {
 
-            this.msgActiveIndex = messageIndex;
-            this.contacts[this.activeIndex].messages.splice(this.msgActiveIndex, 1)
+            this.contacts[this.activeIndex].messages.splice(messageIndex, 1)
 
         },
         truncateText(text) {
-            return text.slice(0, 20);
+            let lastMsg = text
+            if (lastMsg.length > 20){
+                lastMsg.slice(0, 20);
+                lastMsg += "...";
+            };
+            return lastMsg
         },
         dateToHourMin(fullDate) {
             const luxonDate = dt.fromFormat(fullDate, 'dd/MM/yyyy HH:mm:ss');
             return luxonDate.toFormat('HH:mm')
-        }
+        },
     }   
 
 }).mount('#app')

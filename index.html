@@ -82,11 +82,11 @@
                                             </div>
                                             <div class="text-content">
                                                 <h3>{{user.name}}</h3>
-                                                <p class="last-msg">{{ `${truncateText(user.messages[user.messages.length - 1].message)}...` }}</p>
+                                                <p v-if="user.messages.length > 0" class="last-msg">{{ truncateText(user.messages[user.messages.length - 1].message) }}</p>
                                             </div>
                                         </div>
                                         <div class="hour">
-                                            <p>{{ dateToHourMin(user.messages[user.messages.length - 1].date) }}</p>
+                                            <p v-if="user.messages.length > 0">{{ dateToHourMin(user.messages[user.messages.length - 1].date) }}</p>
                                         </div>
                                     </li>
                                 </ul>
